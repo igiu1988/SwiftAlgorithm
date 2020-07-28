@@ -1,7 +1,7 @@
 
-class Node: Equatable {
-    var left: Node?
-    var right: Node?
+class TreeNode: Equatable {
+    var left: TreeNode?
+    var right: TreeNode?
     var value: Int?
     
     init(_ value: Int?) {
@@ -9,7 +9,7 @@ class Node: Equatable {
         print("Node create")
     }
 
-    static func == (lhs: Node, rhs: Node) -> Bool {
+    static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
         return lhs.value == rhs.value
     }
 }

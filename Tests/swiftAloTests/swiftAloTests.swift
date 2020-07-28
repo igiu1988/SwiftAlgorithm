@@ -12,6 +12,8 @@ final class swiftAloTests: XCTestCase {
     func testOffer03() {
         XCTAssertEqual(Offer03().findRepeatNumber([1,2,3,4,4,5]), 4)
     }
+    
+
 
     static var allTests = [
         ("testExample", testExample),

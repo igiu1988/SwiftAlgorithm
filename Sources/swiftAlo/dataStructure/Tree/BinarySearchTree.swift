@@ -2,7 +2,7 @@
 class BinarySearchTree: BinaryTree {
 
     // 当满足“二叉搜索树”的时候, 查找
-    func find(_ data: Int) -> Node? {
+    func find(_ data: Int) -> TreeNode? {
         var p = root
         while p != nil {
             if data < p!.value! {
@@ -20,7 +20,7 @@ class BinarySearchTree: BinaryTree {
     // 当满足“二叉搜索树”的时候, 插入
     func insert(_ data: Int) {
         if (root == nil) {
-            root = Node(data);
+            root = TreeNode(data);
             return;
         }
 
@@ -28,13 +28,13 @@ class BinarySearchTree: BinaryTree {
         while let pNode = p {
             if data > pNode.value! {
                 if pNode.right == nil {
-                    pNode.right = Node(data)
+                    pNode.right = TreeNode(data)
                     return
                 }
                 p = pNode.right
             } else { // data < p.value
                 if pNode.left == nil {
-                    pNode.left = Node(data)
+                    pNode.left = TreeNode(data)
                     return
                 }
                 p = pNode.left;
@@ -44,8 +44,8 @@ class BinarySearchTree: BinaryTree {
 
     // 当满足“二叉搜索树”的时候, 删除
     func delete(_ data: Int) {
-        var p: Node? = root; // p指向要删除的节点，初始化指向根节点
-        var pParent: Node? = nil; // pp记录的是p的父节点
+        var p: TreeNode? = root; // p指向要删除的节点，初始化指向根节点
+        var pParent: TreeNode? = nil; // pp记录的是p的父节点
         while let pNode = p, pNode.value! != data {
             pParent = pNode
             if data > pNode.value! {
@@ -74,7 +74,7 @@ class BinarySearchTree: BinaryTree {
         }
 
         // 删除节点是叶子节点或者仅有一个子节点
-        var child: Node? // p的子节点
+        var child: TreeNode? // p的子节点
         if willDeleteNode.left != nil {
             child = willDeleteNode.left
         } else if willDeleteNode.right != nil {

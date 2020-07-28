@@ -13,9 +13,9 @@
 // todo: 中序遍历可以输出有序的数据序列，时间复杂度是n，非常高效。因此二叉查找树也被称为“二叉排序树”
 
 class BinaryTree {
-    var root: Node? = nil
+    var root: TreeNode? = nil
 
-    init(node: Node) {
+    init(node: TreeNode) {
         self.root = node
     }
     
@@ -24,7 +24,7 @@ class BinaryTree {
         root = createTree(at: 0, with: nums)
     }
     
-    func createTree(at index: Int, with nums: [Int?] ) -> Node? {
+    func createTree(at index: Int, with nums: [Int?] ) -> TreeNode? {
         if index >= nums.count {
             return nil
         }
@@ -32,14 +32,14 @@ class BinaryTree {
             return nil
         }
         
-        let node = Node(nums[index]);
+        let node = TreeNode(nums[index]);
         node.left = createTree(at: 2 * index + 1, with: nums);
         node.right = createTree(at: 2 * index + 2, with: nums);
         return node
     }
     
     // 使用后序遍历打印整个树
-    func printPostOrderTree(_ node: Node?) {
+    func printPostOrderTree(_ node: TreeNode?) {
         if (node == nil) {
             return
         }
@@ -49,7 +49,7 @@ class BinaryTree {
     }
 
     // 使用前序遍历打印整个树
-    func printPreOrderTree(_ node: Node?) {
+    func printPreOrderTree(_ node: TreeNode?) {
         if (node == nil) {
             return
         }

@@ -1,3 +1,3 @@
-struct swift_alo {
+struct swiftAlo {
     var text = "Hello, World!"
 }

@@ -21,8 +21,11 @@ import Foundation
 * }
 */
 
-class Offer07 {
-    func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
+public class Offer07 {
+    public init() {
+        
+    }
+    public func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
         if preorder.count == 0 || inorder.count == 0 {
             return nil
         }

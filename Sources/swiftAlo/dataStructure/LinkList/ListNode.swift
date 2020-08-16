@@ -7,15 +7,15 @@
 
 import Foundation
 
-class ListNode: Equatable {
-    var next: ListNode?
-    var value: Int
+public class ListNode: Equatable {
+    public var next: ListNode?
+    public var value: Int
     
-    init(_ value: Int) {
+    public init(_ value: Int) {
         self.value = value
     }
 
-    static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
         return lhs.value == rhs.value
     }
 }

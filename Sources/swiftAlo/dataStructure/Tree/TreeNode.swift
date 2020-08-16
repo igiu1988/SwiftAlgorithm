@@ -1,15 +1,15 @@
 
-class TreeNode: Equatable {
-    var left: TreeNode?
-    var right: TreeNode?
-    var value: Int?
+public class TreeNode: Equatable {
+    public var left: TreeNode?
+    public var right: TreeNode?
+    public var value: Int?
     
-    init(_ value: Int?) {
+    public init(_ value: Int?) {
         self.value = value
         print("Node create")
     }
 
-    static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
         return lhs.value == rhs.value
     }
 }

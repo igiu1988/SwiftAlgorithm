@@ -7,9 +7,9 @@
 
 import Foundation
 
-class LinkList {
-    var head: ListNode?
-    init(_ array: [Int]) {
+public class LinkList {
+    public var head: ListNode?
+    public init(_ array: [Int]) {
         if array.count > 0 {
             head = ListNode(array.first!)
         }
@@ -40,7 +40,7 @@ class LinkList {
         
     }
     
-    func printList() {
+    public func printList() {
         var node = head
         while node != nil {
             print(node!.value)

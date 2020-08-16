@@ -1,8 +1,8 @@
 
-class BinarySearchTree: BinaryTree {
+public class BinarySearchTree: BinaryTree {
 
     // 当满足“二叉搜索树”的时候, 查找
-    func find(_ data: Int) -> TreeNode? {
+    public func find(_ data: Int) -> TreeNode? {
         var p = root
         while p != nil {
             if data < p!.value! {
@@ -18,7 +18,7 @@ class BinarySearchTree: BinaryTree {
     }
 
     // 当满足“二叉搜索树”的时候, 插入
-    func insert(_ data: Int) {
+    public func insert(_ data: Int) {
         if (root == nil) {
             root = TreeNode(data);
             return;
@@ -43,7 +43,7 @@ class BinarySearchTree: BinaryTree {
     }
 
     // 当满足“二叉搜索树”的时候, 删除
-    func delete(_ data: Int) {
+    public func delete(_ data: Int) {
         var p: TreeNode? = root; // p指向要删除的节点，初始化指向根节点
         var pParent: TreeNode? = nil; // pp记录的是p的父节点
         while let pNode = p, pNode.value! != data {

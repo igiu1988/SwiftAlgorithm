@@ -3,6 +3,7 @@ public class TreeNode: Equatable {
     public var left: TreeNode?
     public var right: TreeNode?
     public var value: Int?
+    public var parent: TreeNode?
     
     public init(_ value: Int?) {
         self.value = value

@@ -13,7 +13,7 @@
 // todo: 中序遍历可以输出有序的数据序列，时间复杂度是n，非常高效。因此二叉查找树也被称为“二叉排序树”
 
 public class BinaryTree {
-    public var root: TreeNode? = nil
+    var root: TreeNode? = nil
 
     public init(node: TreeNode) {
         self.root = node

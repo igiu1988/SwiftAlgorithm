@@ -28,9 +28,12 @@ class QuickSort<E: Equatable & Comparable> {
         let pivot = arr[r]
         var i = p
         var j = p
-        while j < r, arr[j] < pivot {
-            arr.swapAt(i, j)
-            i += 1
+        while j < r {
+            if arr[j] < pivot {
+                arr.swapAt(i, j)
+                i += 1
+            }
+            
             j += 1
         }
         arr.swapAt(i, r)

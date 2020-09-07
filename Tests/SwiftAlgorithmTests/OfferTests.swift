@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import swiftAlo
+@testable import SwiftAlgorithm
 
 final class OfferTests: XCTestCase {
     

@@ -18,7 +18,15 @@ final class LinkListTests: XCTestCase {
         XCTAssertEqual(Offer06.reversePrint(link.head), [2,3,1])
     }
 
-//    static var allTests = [
-//        ("testExample", testExample),
-//    ]
+    func testReverse() {
+        let link = LinkList([1,2,3,4,5,6])
+        let reverseLink = link.reverse()
+        reverseLink.printList()
+//        XCTAssertEqual(link.reverse, [6,5,4,3,2,1])
+    }
+    
+    func testEquatable() {
+        XCTAssertEqual(LinkList([1,2,3,4,5,6]), LinkList([1,2,3,4,5,6]))
+        XCTAssertFalse(LinkList([1,2,3,4,5,6]) == LinkList([1,2,3,4,5,7]))
+    }
 }

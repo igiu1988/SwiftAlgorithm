@@ -7,10 +7,6 @@
 
 import Foundation
 
-extension Array {
-    
-}
-
 class QuickSort<E: Equatable & Comparable> {
     public func quickSort(_ arr: inout Array<E>) {
         quickSortCore(&arr, 0, arr.count - 1)

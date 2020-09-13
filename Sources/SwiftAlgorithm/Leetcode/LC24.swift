@@ -7,7 +7,7 @@
 
 import Foundation
 // 24. 两两交换链表中的节点
-public class lc24 {
+public class LC24 {
     public func swapPairs(_ head: ListNode?) -> ListNode? {
         let result = head?.next
         if result == nil {

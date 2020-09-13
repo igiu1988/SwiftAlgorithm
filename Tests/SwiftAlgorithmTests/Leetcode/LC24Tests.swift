@@ -7,7 +7,7 @@
 import XCTest
 @testable import SwiftAlgorithm
 
-final class lc24Tests: XCTestCase {
+final class LC24Tests: XCTestCase {
     func testlc24() {
         let list = LinkList([1,2,3,4,5,6])
         let node = lc24().swapPairs(list.head)

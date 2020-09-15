@@ -51,6 +51,12 @@ final class OfferTests: XCTestCase {
         let word = "ABCCED"
         XCTAssertTrue(Offer12().exist(board, word))
     }
+    
+    func testOffer12_1() {
+        let board: [[Character]] = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
+        let word = "ABCCED"
+        XCTAssertTrue(Offer12_1().exist(board, word))
+    }
 
 //    static var allTests = [
 //        ("testExample", testExample),

@@ -45,6 +45,12 @@ final class OfferTests: XCTestCase {
         XCTAssertEqual(Offer11().minArray([3]), 3)
         
     }
+    
+    func testOffer12() {
+        let board: [[Character]] = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
+        let word = "ABCCED"
+        XCTAssertTrue(Offer12().exist(board, word))
+    }
 
 //    static var allTests = [
 //        ("testExample", testExample),

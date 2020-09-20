@@ -9,6 +9,7 @@ import Foundation
 
 public class LinkList {
     public var head: ListNode?
+    public var tail: ListNode?
     public init(_ head: ListNode?) {
         self.head = head
     }
@@ -25,6 +26,7 @@ public class LinkList {
             preNode!.next = node
             preNode = node
         }
+        tail = preNode
     }
     
     public func printList() {
@@ -33,7 +35,7 @@ public class LinkList {
             print("空链表")
         }
         while node != nil {
-            print(node!.value)
+            print(node!.value, terminator: node!.next == nil ? "\n" : "->")
             node = node!.next
         }
     }
@@ -50,6 +52,55 @@ public class LinkList {
         }
         return LinkList(pre)
     }
+    
+    public func add(_ val: Int) {
+        if head == nil {
+            head = ListNode(val)
+            tail = head
+        } else {
+            tail?.next = ListNode(val)
+            tail = tail?.next
+        }
+    }
+    
+    // 弹出（移除）第一个元素，并返回
+    public func poll() -> ListNode? {
+        if head != nil {
+            let result = head
+            head = result?.next
+            return result
+        } else {
+            return nil
+        }
+    }
+    
+    public func peek() -> ListNode? {
+        return head
+    }
+    
+    public func size() -> Int {
+        var size = 0
+        var node = head
+        while node != nil {
+            size += 1
+            node = node?.next
+        }
+        return size
+    }
+    
+    public func get(index i: Int) -> ListNode? {
+        var step = 0
+        var node = head
+        while node != nil {
+            if step == i {
+                return node
+            }
+            step += 1
+            node = node?.next
+        }
+        return nil
+    }
+
 }
 
 extension LinkList: Equatable {
